@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "precio": 25000,
+    "anio": 2021,
+    "combustible": "Nafta",
+    "imagen": "https://cdn.motor1.com/images/mgl/qE11x/s1/toyota-corolla-2021.jpg",
+    "descripcion": "Sedán compacto, económico y confiable."
+  },
+  {
+    "id": 2,
+    "marca": "Ford",
+    "modelo": "Focus",
+    "precio": 22000,
+    "anio": 2019,
+    "combustible": "Nafta",
+    "imagen": "https://cdn.motor1.com/images/mgl/lBBL9/s1/ford-focus-2020.jpg",
+    "descripcion": "Auto ágil y cómodo, ideal para la ciudad."
+  },
+  {
+    "id": 3,
+    "marca": "Chevrolet",
+    "modelo": "Cruze",
+    "precio": 27000,
+    "anio": 2022,
+    "combustible": "Nafta",
+    "imagen": "https://cdn.motor1.com/images/mgl/JqqvP/s1/chevrolet-cruze-2022.jpg",
+    "descripcion": "Diseño moderno con excelente rendimiento."
+  }
+]

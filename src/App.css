@@ -1,38 +1,190 @@
+/* Estilos globales*/
+
+/* Base */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: "Roboto", sans-serif;
+  background-color: #121212;
   color: white;
+  min-height: 100vh;
 }
 
+/* Encabezado */
+.App-header {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-bottom: 2px solid #ffa726;
+}
+
+/* Links */
 .App-link {
-  color: #61dafb;
+  color: #ffa726;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
+.App-link:hover {
+  color: #ffb84d;
+}
+
+/* CATÁLOGO PRINCIPAL  */
+.app-container {
+  padding: 2rem;
+  background-color: #121212;
+  min-height: 100vh;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.app-title {
+  color: #ffa726;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* BOTONES PRINCIPALES */
+.button-container {
+  display: flex;
+  justify-content: flex-start; /*Alineados a izquierda */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  will-change: auto;
+  transition: none;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* FILTROS */
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centra los filtros en el medio */
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Dropdown (Select de marca) */
+.MuiSelect-select {
+  background-color: #1e1e1e !important;
+  color: white !important;
+  border-radius: 8px;
+  padding: 0.6rem 1rem !important;
+}
+
+.MuiMenu-paper {
+  background-color: #1e1e1e !important;
+  color: white !important;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: #2c2c2c !important;
+}
+
+/* Slider */
+.price-slider {
+  width: 250px;
+}
+
+.no-results {
+  color: #ccc;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* CARDS  */
+.car-card {
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.car-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
+}
+
+/*BOTONES*/
+button,
+.MuiButton-root {
+  transition: all 0.25s ease !important;
+}
+
+button:hover,
+.MuiButton-root:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.4);
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SPINNER */
+.loading-spinner {
+  margin: 2rem auto;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid #ffa726;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Evita desbordes al abrir dropdowns */  
+html,
+body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
